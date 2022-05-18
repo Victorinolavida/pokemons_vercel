@@ -1,7 +1,7 @@
 
 
 const toggleFavorite=(id:number)=>{
-  console.log('togglefavorite llamado')
+ 
 
 
   let favorites:number[] = JSON.parse( localStorage.getItem('favorites') || '[]' )
@@ -26,6 +26,7 @@ const existInFavorites = (id:number):boolean =>{
 
   const favorites:number[] = JSON.parse( localStorage.getItem('favorites') || '[]' )
 
+  console.log(favorites.includes(id))
   return favorites.includes(id)
 
 }
